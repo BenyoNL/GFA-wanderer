@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wanderer Game</title>
+  <style>
+    .main-canvas {
+      margin: 20px;
+      border: 1px solid black;
+    }
+
+    .preload-images {
+      overflow: hidden;
+      height: 0;
+    }
+
+    #hud1 {
+      z-index: 2;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 13px;
+      float: right;
+    }
+
+    #hud2 {
+      z-index: 2;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 13px;
+      float: right;
+    }
+    #defeat-container {
+      z-index: 5;
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    #defeat {
+      max-height: 256px;
+      z-index: 6;
+      display: block;
+      position: fixed;
+      top: 30%;
+    }
+    #key-container {
+      z-index: 3;
+      display: block;
+      align-items: center;
+      max-width: 90px;
+      max-height: 90px;
+      justify-content:center;
+      float:right;
+    }
+    #key {
+      z-index:5;
+      max-width: 35%;
+      max-height: 35%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="preload-images">
+    <img id="tombstone" src="img/tombstone.png">
+    <img id="floor" src="img/floor.png">
+    <img id="wall" src="img/wall.png">
+    <img id="hero-up" src="img/hero-up.png">
+    <img id="hero-right" src="img/hero-right.png">
+    <img id="hero-down" src="img/hero-down.png">
+    <img id="hero-left" src="img/hero-left.png">
+    <img id="skeleton" src="img/skeleton.png">
+    <img id="boss" src="img/boss.png">
+  </div>
+  <div id='hud1'>
+  </div>
+  <div id = 'hud2'></div>
+  <div id="defeat-container">
+    <img id="defeat" src="img/defeat.png">
+  </div>
+  <div id="key-container">
+    <img id="key" src="img/boss-key.png">
+  </div>
+  <canvas width="720" height="720" class="main-canvas"></canvas>
+  <script src="bundle.js"></script>
+</body>
+
+</html>
